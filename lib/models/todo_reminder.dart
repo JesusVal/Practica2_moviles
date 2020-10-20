@@ -1,4 +1,4 @@
-// TODO: convertir en adapter de Hive y utilizar build runner para generar el adapter
+// DIDIT: convertir en adapter de Hive y utilizar build runner para generar el adapter
 import 'package:hive/hive.dart';
 part 'todo_reminder.g.dart';
 
