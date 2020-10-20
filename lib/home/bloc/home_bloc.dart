@@ -15,6 +15,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   HomeBloc() : super(HomeInitialState());
 
+  get reminderBox => this._reminderBox;
+
   @override
   Stream<HomeState> mapEventToState(
     HomeEvent event,
@@ -45,7 +47,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     // DIDIT: ver si existen datos To-doRemainder en la box y sacarlos como Lista (no es necesario hacer get ni put)
     // debe haber un adapter para que la BD pueda detectar el objeto
 
-    //TODO: Revisar si funciona
     if (_reminderBox.isNotEmpty) {
       return _reminderBox.values.map((e) => e as TodoRemainder).toList();
     }

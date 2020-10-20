@@ -4,6 +4,8 @@ import 'package:pract_dos/home/bloc/home_bloc.dart';
 import 'package:pract_dos/home/home_body.dart';
 import 'package:pract_dos/models/todo_reminder.dart';
 
+import 'bloc/home_bloc.dart';
+
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
 
@@ -68,8 +70,9 @@ class _HomePageState extends State<HomePage> {
           ).then(
             (result) {
               if (result != null) {
-                // TODO: bloc add evento to add reminder to db
-                // TODO: add reminder to HomeBody list view
+                // DIDIT: bloc add evento to add reminder to db
+                // DIDIT: add reminder to HomeBody list view
+                _homeBloc.add(OnAddElementEvent(todoReminder: result));
               }
             },
           );
